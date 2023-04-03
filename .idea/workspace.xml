@@ -4,64 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/ru/configserver/ConfigServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/ru/configserver/configuration/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/test/java/ru/configserver/ConfigServerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/ShopConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/CategoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/ManufacturerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/ProductDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/enums/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ManufacturerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/CategoryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/ManufacturerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/ProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/mapper/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/mapper/ManufacturerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/mapper/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/CategoryRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ManufacturerRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ProductRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/dao/ManufacturerDaoDataJpaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/service/ManufacturerServiceMockitoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockMvcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockitoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/CategoryRestControllerIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ManufacturerRestControllerIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ProductRestControllerIntegrationTest.java" afterDir="false" />
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="Config-server-and-encryption">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +63,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/config-server" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -338,8 +282,16 @@
       <option name="presentableId" value="Default" />
       <updated>1679777731457</updated>
       <workItem from="1679777732887" duration="10063000" />
-      <workItem from="1680251421074" duration="18592000" />
+      <workItem from="1680251421074" duration="19372000" />
     </task>
+    <task id="LOCAL-00001" summary="Config-server-and-encryption">
+      <created>1680376600536</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680376600536</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,14 +308,25 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Config-server-and-encryption" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config-server-and-encryption" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="org.postgresql.util.PSQLException" package="org.postgresql.util" />
-          <option name="timeStamp" value="5" />
-        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.3.4/aacd2a4746a4818851d32ac0b08c1a2e22dbe145/postgresql-42.3.4-sources.jar!/org/postgresql/core/v3/ConnectionFactoryImpl.java</url>
+          <line>642</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((String)((HashMap.Node)((HashMap)errorMsg.mesgParts).entrySet().toArray()[6]).getValue()).value[0]" custom="java.util.HashMap.Node,java.util.HashMap,java.lang.String" />
+        <watch expression="pgInput.buffer[115]" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
