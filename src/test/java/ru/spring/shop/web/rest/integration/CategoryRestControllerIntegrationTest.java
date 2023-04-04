@@ -10,9 +10,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import ru.api.category.dto.CategoryDto;
 import ru.spring.shop.dao.CategoryDao;
 import ru.spring.shop.entity.enums.Status;
-import ru.spring.shop.web.dto.CategoryDto;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.*;
@@ -45,7 +45,7 @@ class CategoryRestControllerIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(CategoryDto.builder()
                                 .title(SOFTWARE_CATEGORY_TITLE)
-                                .status(Status.ACTIVE)
+                                .status("ACTIVE")
                                 .build()
                         )))
                 .andExpect(status().isCreated());
@@ -69,7 +69,7 @@ class CategoryRestControllerIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(CategoryDto.builder()
                                 .title(HARDWARE_CATEGORY_TITLE)
-                                .status(Status.ACTIVE)
+                                .status("ACTIVE")
                                 .build()
                         )))
                 .andExpect(status().isNoContent());

@@ -6,11 +6,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.api.manufacturer.dto.ManufacturerDto;
 import ru.spring.shop.dao.ManufacturerDao;
 import ru.spring.shop.entity.Manufacturer;
 import ru.spring.shop.entity.enums.Status;
-import ru.spring.shop.web.dto.ManufacturerDto;
-import ru.spring.shop.web.dto.mapper.ManufacturerMapper;
+import ru.spring.shop.web.mapper.ManufacturerMapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,7 +92,7 @@ class ManufacturerServiceMockitoTest {
         ManufacturerDto manufacturerDto = ManufacturerDto.builder()
                 .id(1L)
                 .name(APPLE_COMPANY_NAME)
-                .status(Status.ACTIVE)
+                .status("ACTIVE")
                 .build();
 
         given(manufacturerMapper.toManufacturerDto(any())).will(
@@ -132,7 +132,7 @@ class ManufacturerServiceMockitoTest {
         ManufacturerDto manufacturerDto = ManufacturerDto.builder()
                 .id(1L)
                 .name(APPLE_COMPANY_NAME)
-                .status(Status.ACTIVE)
+                .status("ACTIVE")
                 .build();
         manufacturerService.deleteById(manufacturerDto.getId());
         then(manufacturerDao).should().findById(manufacturerDto.getId());

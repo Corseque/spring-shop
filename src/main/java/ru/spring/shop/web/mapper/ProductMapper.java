@@ -1,14 +1,15 @@
-package ru.spring.shop.web.dto.mapper;
+package ru.spring.shop.web.mapper;
 
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
+import ru.api.category.dto.CategoryDto;
+import ru.api.product.dto.ProductDto;
 import ru.spring.shop.dao.CategoryDao;
 import ru.spring.shop.dao.ManufacturerDao;
 import ru.spring.shop.entity.Category;
 import ru.spring.shop.entity.Manufacturer;
 import ru.spring.shop.entity.Product;
-import ru.spring.shop.web.dto.CategoryDto;
-import ru.spring.shop.web.dto.ProductDto;
+import ru.spring.shop.entity.enums.Status;
 
 import java.util.NoSuchElementException;
 import java.util.Set;
@@ -39,8 +40,16 @@ public interface ProductMapper {
         return categories.stream().map(category -> CategoryDto.builder()
                         .id(category.getId())
                         .title(category.getTitle())
-                        .status(category.getStatus())
+                        .status(category.getStatus().getTitle())
                         .build())
                 .collect(Collectors.toSet());
+    }
+
+    default Status getStatus(String status) {
+        return Status.valueOf(status);
+    }
+
+    default String getStatus(Status status) {
+        return status.getTitle();
     }
 }

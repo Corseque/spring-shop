@@ -3,13 +3,15 @@ package ru.spring.shop.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import ru.api.product.dto.ProductDto;
 import ru.spring.shop.dao.CategoryDao;
 import ru.spring.shop.dao.ManufacturerDao;
 import ru.spring.shop.dao.ProductDao;
 import ru.spring.shop.entity.Product;
+
 import ru.spring.shop.entity.enums.Status;
-import ru.spring.shop.web.dto.ProductDto;
-import ru.spring.shop.web.dto.mapper.ProductMapper;
+import ru.spring.shop.web.mapper.ProductMapper;
 
 import java.util.List;
 import java.util.NoSuchElementException;

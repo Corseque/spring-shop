@@ -10,9 +10,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import ru.api.manufacturer.dto.ManufacturerDto;
 import ru.spring.shop.dao.ManufacturerDao;
 import ru.spring.shop.entity.enums.Status;
-import ru.spring.shop.web.dto.ManufacturerDto;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.*;
@@ -46,7 +46,7 @@ class ManufacturerRestControllerIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(ManufacturerDto.builder()
                                 .name(APPLE_COMPANY_NAME)
-                                .status(Status.ACTIVE)
+                                .status("ACTIVE")
                                 .build()
                         )))
                 .andExpect(status().isCreated());
@@ -72,7 +72,7 @@ class ManufacturerRestControllerIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(ManufacturerDto.builder()
                                 .name(SAMSUNG_COMPANY_NAME)
-                                .status(Status.ACTIVE)
+                                .status("ACTIVE")
                                 .build()
                         )))
                 .andExpect(status().isNoContent());

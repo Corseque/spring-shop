@@ -1,13 +1,14 @@
 package ru.spring.shop.web.rest;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import ru.api.manufacturer.dto.ManufacturerDto;
 import ru.spring.shop.service.ManufacturerService;
-import ru.spring.shop.web.dto.ManufacturerDto;
 
 import java.net.URI;
 import java.util.List;
@@ -15,12 +16,15 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/manufacturer")
+@Slf4j
 public class ManufacturerRestController {
 
     private final ManufacturerService manufacturerService;
 
     @GetMapping("/all")
     public List<ManufacturerDto> getManufacturerList() {
+//        log.error("EXCEPTION FOR RETRY");
+//        throw new RuntimeException();
         return manufacturerService.findAll();
     }
 

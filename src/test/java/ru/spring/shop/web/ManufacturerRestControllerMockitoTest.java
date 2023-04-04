@@ -10,9 +10,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import ru.spring.shop.entity.enums.Status;
+import ru.api.manufacturer.dto.ManufacturerDto;
+
 import ru.spring.shop.service.ManufacturerService;
-import ru.spring.shop.web.dto.ManufacturerDto;
 import ru.spring.shop.web.rest.ManufacturerRestController;
 
 import java.net.URI;
@@ -52,12 +52,12 @@ class ManufacturerRestControllerMockitoTest {
         manufacturers.add(ManufacturerDto.builder()
                 .id(1L)
                 .name(APPLE_COMPANY_NAME)
-                .status(Status.ACTIVE)
+                .status("ACTIVE")
                 .build());
         manufacturers.add(ManufacturerDto.builder()
                 .id(2L)
                 .name(SAMSUNG_COMPANY_NAME)
-                .status(Status.ACTIVE)
+                .status("ACTIVE")
                 .build());
         mockMvc = MockMvcBuilders.standaloneSetup(manufacturerRestController).build();
     }
@@ -85,7 +85,7 @@ class ManufacturerRestControllerMockitoTest {
         ManufacturerDto manufacturer = ManufacturerDto.builder()
                 .id(1L)
                 .name(APPLE_COMPANY_NAME)
-                .status(Status.ACTIVE)
+                .status("ACTIVE")
                 .build();
         given(manufacturerService.save(any())).will(
                 (invocation) -> {
@@ -117,7 +117,7 @@ class ManufacturerRestControllerMockitoTest {
         ManufacturerDto manufacturer = ManufacturerDto.builder()
                 .id(1L)
                 .name(APPLE_COMPANY_NAME)
-                .status(Status.ACTIVE)
+                .status("ACTIVE")
                 .build();
         Long id = manufacturer.getId();
 

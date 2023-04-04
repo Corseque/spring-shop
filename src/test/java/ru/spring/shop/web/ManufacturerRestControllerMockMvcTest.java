@@ -9,9 +9,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import ru.spring.shop.entity.enums.Status;
+import ru.api.manufacturer.dto.ManufacturerDto;
 import ru.spring.shop.service.ManufacturerService;
-import ru.spring.shop.web.dto.ManufacturerDto;
 import ru.spring.shop.web.rest.ManufacturerRestController;
 
 import java.util.ArrayList;
@@ -46,12 +45,12 @@ class ManufacturerRestControllerMockMvcTest {
         manufacturers.add(ManufacturerDto.builder()
                 .id(1L)
                 .name(APPLE_COMPANY_NAME)
-                .status(Status.ACTIVE)
+                .status("ACTIVE")
                 .build());
         manufacturers.add(ManufacturerDto.builder()
                 .id(2L)
                 .name(SAMSUNG_COMPANY_NAME)
-                .status(Status.ACTIVE)
+                .status("ACTIVE")
                 .build());
     }
 
@@ -75,14 +74,14 @@ class ManufacturerRestControllerMockMvcTest {
                 .thenReturn(ManufacturerDto.builder()
                         .id(1L)
                         .name(APPLE_COMPANY_NAME)
-                        .status(Status.ACTIVE)
+                        .status("ACTIVE")
                         .build());
 
         mockMvc.perform(post("/api/v1/manufacturer")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(ManufacturerDto.builder()
                                 .name(APPLE_COMPANY_NAME)
-                                .status(Status.ACTIVE)
+                                .status("ACTIVE")
                                 .build()
                 )))
                 .andExpect(status().isCreated());
