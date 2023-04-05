@@ -51,7 +51,9 @@ public class ProductService {
     }
 
     public ProductDto save(ProductDto productDto) {
-        Product product = productMapper.toProduct(productDto, manufacturerDao, categoryDao);
+        Product product = productMapper.toProduct(productDto,
+//                manufacturerDao,
+                categoryDao);
         if (product.getId() != null) {
             productDao.findById(product.getId()).ifPresent((p) ->
                     product.setVersion(p.getVersion())
@@ -74,7 +76,9 @@ public class ProductService {
     }
 
     public void delete(ProductDto productDto) {
-        Product product = productMapper.toProduct(productDto, manufacturerDao, categoryDao);
+        Product product = productMapper.toProduct(productDto,
+//                manufacturerDao,
+                categoryDao);
         if (product.getId() != null) {
             product.setStatus(Status.DISABLE);
             productDao.save(product);

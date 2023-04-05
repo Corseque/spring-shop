@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="Config-server-and-encryption">
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="api-manufacturer&#10;status enum to string">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-external/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-external/build.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-external/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
@@ -34,33 +35,15 @@
       <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/product/dto/ProductDto.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/src/main/resources/META-INF/spring.factories" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/stub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ManufacturerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ManufacturerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stub" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/CategoryDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/ManufacturerDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/ProductDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/mapper/ManufacturerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/ManufacturerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/dto/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/CategoryRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/CategoryRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/ManufacturerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/ManufacturerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/ProductMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ManufacturerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ManufacturerRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ProductRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/service/ManufacturerServiceMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/service/ManufacturerServiceMockitoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockMvcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockMvcTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockitoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/CategoryRestControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/CategoryRestControllerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ManufacturerRestControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ManufacturerRestControllerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ProductRestControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ProductRestControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +88,47 @@
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api-external" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api-external" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api-external" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="config-server" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="config-server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="config-server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="spring-shop" type="f1a62948:ProjectNode" />
               </path>
               <path>
@@ -129,12 +153,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api-external" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -170,7 +196,8 @@
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "4d46967db8ea3ffe68ba449ec8578e41"
+    "settings.editor.selected.configurable": "spring.boot",
+    "spring.configuration.checksum": "83f22b8ac5db0d56ac1b5a5abfa4a243"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -182,10 +209,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api-external\src\main\resources" />
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java" />
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api-external\src\main\java\ru\apiexternal\rest" />
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java\ru\api\product\dto" />
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java\ru\api\product" />
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java\ru\api\manufacturer" />
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\config-server\src\main\resources" />
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java\ru\api\category" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java" />
@@ -203,14 +230,14 @@
       <recent name="ru.spring.shop.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.java.ru.apiexternal.rest" />
       <recent name="ru.apiexternal.rest" />
-      <recent name="ru.api.common" />
-      <recent name="ru.api.category.dto" />
       <recent name="ru.api.product.dto" />
+      <recent name="ru.api.category.dto" />
       <recent name="ru.api.manufacturer.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.spring-shop [build]">
+  <component name="RunManager" selected="Spring Boot.ApiExternalApplication">
     <configuration name="api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -232,31 +259,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="api [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="api-external [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="spring-shop [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-external" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -274,10 +280,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="spring-shop [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="api-external [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-external" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -295,9 +301,37 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="config-server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/config-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="api.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.api.ApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiExternalApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="api-external" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.apiexternal.ApiExternalApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -335,10 +369,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.api [clean]" />
-      <item itemvalue="Gradle.spring-shop [build]" />
-      <item itemvalue="Gradle.spring-shop [clean]" />
       <item itemvalue="Gradle.api [build]" />
+      <item itemvalue="Gradle.api-external [build]" />
+      <item itemvalue="Gradle.api-external [clean]" />
+      <item itemvalue="Gradle.config-server [build]" />
+      <item itemvalue="Spring Boot.ApiExternalApplication (1)" />
       <item itemvalue="Spring Boot.ApiApplication" />
       <item itemvalue="Spring Boot.ApiExternalApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -346,11 +381,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.spring-shop [build]" />
-        <item itemvalue="Gradle.spring-shop [clean]" />
-        <item itemvalue="Spring Boot.Shop" />
         <item itemvalue="Gradle.api [build]" />
-        <item itemvalue="Gradle.api [clean]" />
+        <item itemvalue="Gradle.api-external [build]" />
+        <item itemvalue="Spring Boot.Shop" />
+        <item itemvalue="Gradle.api-external [clean]" />
+        <item itemvalue="Gradle.config-server [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -363,7 +398,8 @@
       <option name="presentableId" value="Default" />
       <updated>1679777731457</updated>
       <workItem from="1679777732887" duration="10063000" />
-      <workItem from="1680251421074" duration="38444000" />
+      <workItem from="1680251421074" duration="48561000" />
+      <workItem from="1680641556641" duration="5431000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -379,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680523225048</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="api-manufacturer&#10;status enum to string">
+      <created>1680608349270</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680608349270</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +441,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Config-server-and-encryption" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config-server-and-encryption" />
+    <MESSAGE value="api-manufacturer&#10;status enum to string" />
+    <option name="LAST_COMMIT_MESSAGE" value="api-manufacturer&#10;status enum to string" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -420,5 +464,9 @@
         <watch expression="pgInput.buffer[115]" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
