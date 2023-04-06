@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="api-manufacturer&#10;status enum to string">
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/CategoryRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java" afterDir="false" />
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="external api product, category&#10;feign factory (createClient)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/common/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/common/InfoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ManufacturerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ManufacturerRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/category/api/CategoryGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/category/api/CategoryGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/config/ApiProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/config/ApiProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/config/FeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/config/FeignConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/product/api/ProductGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/product/api/ProductGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api-external" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="JpbToolWindowState">
@@ -208,7 +206,51 @@
       <recent name="ru.api.manufacturer.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiExternalApplication">
+  <component name="RunManager" selected="Gradle.Tests in 'spring-shop.test'">
+    <configuration name="ManufacturerServiceMockitoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.spring.shop.service.ManufacturerServiceMockitoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'spring-shop.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -230,10 +272,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="api-external [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="spring-shop [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api-external" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -251,10 +293,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="api-external [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="spring-shop [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api-external" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -263,27 +305,6 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="config-server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/config-server" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -312,35 +333,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Shop" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="spring-shop.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.spring.shop.Shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.spring.shop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Gradle.ManufacturerServiceMockitoTest" />
+      <item itemvalue="Gradle.Tests in 'spring-shop.test'" />
+      <item itemvalue="Gradle.spring-shop [build]" />
+      <item itemvalue="Gradle.spring-shop [clean]" />
       <item itemvalue="Gradle.api [build]" />
-      <item itemvalue="Gradle.api-external [build]" />
-      <item itemvalue="Gradle.api-external [clean]" />
-      <item itemvalue="Gradle.config-server [build]" />
       <item itemvalue="Spring Boot.ApiExternalApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.Shop" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'spring-shop.test'" />
+        <item itemvalue="Gradle.spring-shop [build]" />
+        <item itemvalue="Gradle.spring-shop [clean]" />
+        <item itemvalue="Gradle.ManufacturerServiceMockitoTest" />
         <item itemvalue="Gradle.api [build]" />
-        <item itemvalue="Spring Boot.Shop" />
-        <item itemvalue="Gradle.api-external [build]" />
-        <item itemvalue="Gradle.api-external [clean]" />
-        <item itemvalue="Gradle.config-server [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -354,7 +362,7 @@
       <updated>1679777731457</updated>
       <workItem from="1679777732887" duration="10063000" />
       <workItem from="1680251421074" duration="48561000" />
-      <workItem from="1680641556641" duration="11217000" />
+      <workItem from="1680641556641" duration="17376000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -384,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680719268387</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="external api product, category&#10;feign factory (createClient)">
+      <created>1680725032209</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680725032209</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +419,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Config-server-and-encryption" />
     <MESSAGE value="api-manufacturer&#10;status enum to string" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-manufacturer&#10;status enum to string" />
+    <MESSAGE value="external api product, category&#10;feign factory (createClient)" />
+    <option name="LAST_COMMIT_MESSAGE" value="external api product, category&#10;feign factory (createClient)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
