@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 5">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 5: add git submodule" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +104,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api-external" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="JpbToolWindowState">
@@ -335,7 +331,7 @@
       <workItem from="1679777732887" duration="10063000" />
       <workItem from="1680251421074" duration="48561000" />
       <workItem from="1680641556641" duration="19818000" />
-      <workItem from="1680859425457" duration="1746000" />
+      <workItem from="1680859425457" duration="2054000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -379,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680785098547</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lesson 5: add git submodule">
+      <created>1680869905503</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680869905503</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +404,8 @@
     <MESSAGE value="api-manufacturer&#10;status enum to string" />
     <MESSAGE value="external api product, category&#10;feign factory (createClient)" />
     <MESSAGE value="lesson 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 5" />
+    <MESSAGE value="lesson 5: add git submodule" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 5: add git submodule" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
