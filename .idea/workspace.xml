@@ -4,36 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 5: add git submodule">
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/config/ShopConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/dao/security/AccountRoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/dao/security/AccountUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/dao/security/AuthorityDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/entity/security/AccountRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/entity/security/AccountUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/entity/security/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/entity/security/enums/AccountStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/exeption/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/exeption/UsernameAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/UserRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/JpaUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/resources/db/test-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/AuthenticationUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 5: security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api" beforeDir="false" afterPath="$PROJECT_DIR$/api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/CategoryRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/CategoryRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,7 +339,7 @@
       <workItem from="1680251421074" duration="48561000" />
       <workItem from="1680641556641" duration="19818000" />
       <workItem from="1680859425457" duration="21704000" />
-      <workItem from="1681246868337" duration="3861000" />
+      <workItem from="1681246868337" duration="4327000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -424,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680870058815</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="lesson 5: security">
+      <created>1681250998525</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681250998525</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +427,8 @@
     <MESSAGE value="external api product, category&#10;feign factory (createClient)" />
     <MESSAGE value="lesson 5" />
     <MESSAGE value="lesson 5: add git submodule" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 5: add git submodule" />
+    <MESSAGE value="lesson 5: security" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 5: security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -468,7 +449,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/JpaUserDetailService.java</url>
-          <line>53</line>
+          <line>52</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
