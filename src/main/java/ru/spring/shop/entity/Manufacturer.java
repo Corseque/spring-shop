@@ -21,9 +21,13 @@ public class Manufacturer extends InfoEntity {
     @Column(name = "name")
     private String name;
 
-
     @OneToMany(mappedBy = "manufacturer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Product> products;
+
+
+
+
+
 
     @Override
     public String toString() {

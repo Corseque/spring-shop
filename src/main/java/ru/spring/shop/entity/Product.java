@@ -42,6 +42,10 @@ public class Product extends InfoEntity {
             inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories = new HashSet<>();
 
+
+
+
+
     @Override
     public String toString() {
         StringBuilder printProduct = new StringBuilder("Product{" +
