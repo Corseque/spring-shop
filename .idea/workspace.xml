@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 5: security">
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 6: security">
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/UserGateway.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/SomeClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/config/ApiProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/config/ApiProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/config/FeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/config/FeignConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,36 +75,6 @@
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="api-external" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="api-external" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="api-external" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="config-server" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="config-server" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="config-server" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="spring-shop" type="f1a62948:ProjectNode" />
               </path>
               <path>
@@ -126,14 +99,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/demo" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api-external" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="JpbToolWindowState">
@@ -343,7 +316,7 @@
       <workItem from="1680251421074" duration="48561000" />
       <workItem from="1680641556641" duration="19818000" />
       <workItem from="1680859425457" duration="21704000" />
-      <workItem from="1681246868337" duration="4689000" />
+      <workItem from="1681246868337" duration="10991000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -415,7 +388,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681251202466</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="lesson 5: security">
+      <created>1681251572350</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681251572350</updated>
+    </task>
+    <task id="LOCAL-00012" summary="lesson 6: security">
+      <created>1681251672348</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681251672348</updated>
+    </task>
+    <task id="LOCAL-00013" summary="lesson 6: security">
+      <created>1681251703148</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681251703148</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +433,8 @@
     <MESSAGE value="lesson 5" />
     <MESSAGE value="lesson 5: add git submodule" />
     <MESSAGE value="lesson 5: security" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 5: security" />
+    <MESSAGE value="lesson 6: security" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 6: security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,7 +465,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api/src/main/java/ru/api/config/FeignConfig.java</url>
-          <line>35</line>
+          <line>36</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
