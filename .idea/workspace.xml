@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 7: AuthenticationGateway">
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/Sessions.java" afterDir="false" />
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 7: token with sessions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/AuthenticationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/AuthenticationRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtConfigurer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/Sessions.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/Sessions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/AuthenticationGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/AuthenticationGateway.java" afterDir="false" />
     </list>
@@ -318,7 +321,7 @@
       <workItem from="1680641556641" duration="19818000" />
       <workItem from="1680859425457" duration="21704000" />
       <workItem from="1681246868337" duration="22646000" />
-      <workItem from="1681458343262" duration="34439000" />
+      <workItem from="1681458343262" duration="52812000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -467,7 +470,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681909546107</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="lesson 7: token with sessions">
+      <created>1682427321463</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1682427321463</updated>
+    </task>
+    <task id="LOCAL-00023" summary="lesson 7: token with sessions">
+      <created>1682427334280</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1682427334280</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +512,8 @@
     <MESSAGE value="lesson 7: security" />
     <MESSAGE value="lesson 7: jwt token" />
     <MESSAGE value="lesson 7: AuthenticationGateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 7: AuthenticationGateway" />
+    <MESSAGE value="lesson 7: token with sessions" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 7: token with sessions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -510,24 +528,19 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/JpaUserDetailService.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/AuthenticationRestController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/AuthenticationRestController.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="33" />
+          <line>32</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenFilter.java</url>
           <line>24</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenProvider.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="35" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
