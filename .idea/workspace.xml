@@ -4,17 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 7: token with sessions">
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 8">
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/jms/config/JmsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/jms/config/TaskConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/jms/service/JmsListenerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/jms/service/JmsSenderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/JmsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/TaskConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/JmsSenderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/AuthenticationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/AuthenticationRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/Sessions.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/Sessions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-external/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/UserRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/Sessions.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/AuthenticationGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/AuthenticationGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/product/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/product/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/ShopConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/ShopConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ProductRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +117,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api-external" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="JpbToolWindowState">
@@ -138,7 +145,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/Corse/IdeaProjects/Spring2/spring-shop/api-external/src/main/java/ru/apiexternal/dao",
+    "last_opened_file_path": "C:/Users/Corse/IdeaProjects/Spring2/spring-shop/api/src/main/java/ru/jms",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -159,11 +166,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java\ru\jms" />
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api-external\src\main\java\ru\apiexternal\dao" />
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api-external\src\main\java\ru\apiexternal\rest" />
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api-external\src\main\resources" />
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java\ru\api\product\dto" />
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java\ru\api\product" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java" />
@@ -188,7 +195,7 @@
       <recent name="ru.api.product.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiExternalApplication">
+  <component name="RunManager" selected="Gradle.api [build] (1)">
     <configuration name="test-data.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/api-external/src/main/resources/db/test-data.sql" />
       <script-mode>FILE</script-mode>
@@ -300,8 +307,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Shop" />
         <item itemvalue="Gradle.api [build] (1)" />
+        <item itemvalue="Spring Boot.Shop" />
         <item itemvalue="Database Script.test-data.sql" />
         <item itemvalue="Gradle.api [build]" />
         <item itemvalue="Gradle.Tests in 'spring-shop.test'" />
@@ -321,7 +328,8 @@
       <workItem from="1680641556641" duration="19818000" />
       <workItem from="1680859425457" duration="21704000" />
       <workItem from="1681246868337" duration="22646000" />
-      <workItem from="1681458343262" duration="52812000" />
+      <workItem from="1681458343262" duration="57893000" />
+      <workItem from="1683327533620" duration="12854000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -484,7 +492,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682427334280</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="lesson 7: token with sessions">
+      <created>1683288494378</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1683288494378</updated>
+    </task>
+    <task id="LOCAL-00025" summary="lesson 7: token with sessions">
+      <created>1683288582017</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1683288582017</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +535,8 @@
     <MESSAGE value="lesson 7: jwt token" />
     <MESSAGE value="lesson 7: AuthenticationGateway" />
     <MESSAGE value="lesson 7: token with sessions" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 7: token with sessions" />
+    <MESSAGE value="lesson 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -528,19 +551,19 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/AuthenticationRestController.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="40" />
+          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/AuthenticationRestController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="48" />
+          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/security/UserRestController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtTokenFilter.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="50" />
+          <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

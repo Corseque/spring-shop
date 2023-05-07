@@ -7,6 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.api.product.dto.ProductDto;
+
+import ru.jms.service.JmsSenderService;
 import ru.spring.shop.service.ProductService;
 
 import java.net.URI;
@@ -18,6 +20,8 @@ import java.util.List;
 public class ProductRestController {
 
     private final ProductService productService;
+
+    private final JmsSenderService jmsSenderService;
 
     @GetMapping("/all")
     public List<ProductDto> getProductsList() {
@@ -54,7 +58,11 @@ public class ProductRestController {
     public ResponseEntity<?> updateProduct(@PathVariable(name = "productId") Long id,
                                            @Validated @RequestBody ProductDto productDto) {
         productDto.setId(id);
+        ProductDto oldProductDto = productService.findById(id);
         ProductDto savedProductDto = productService.save(productDto);
+        if (productDto.getCost() != oldProductDto.getCost()) {
+            jmsSenderService.sendProductMessage(savedProductDto);
+        }
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setLocation(URI.create("/api/v1/product/" + savedProductDto.getId()));
         return new ResponseEntity<>(httpHeaders, HttpStatus.NO_CONTENT);
