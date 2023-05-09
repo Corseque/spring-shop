@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 8 jms">
-      <change afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/security/jwt/JwtToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/jms/JmsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/jms/TaskConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/jms/JmsListenerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/jms/JmsSenderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/CategoryRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/CategoryRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ManufacturerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ManufacturerRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/product/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/product/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/jms/config/JmsConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/jms/config/TaskConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/jms/service/JmsListenerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/jms/service/JmsSenderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/rest/ProductRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/jms/JmsListenerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/jms/JmsListenerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +314,7 @@
       <workItem from="1680859425457" duration="21704000" />
       <workItem from="1681246868337" duration="22646000" />
       <workItem from="1681458343262" duration="57893000" />
-      <workItem from="1683327533620" duration="20336000" />
+      <workItem from="1683327533620" duration="22058000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -520,7 +505,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683488393740</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="lesson 8 jms">
+      <created>1683662703626</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1683662703626</updated>
+    </task>
+    <task id="LOCAL-00029" summary="lesson 8 jms">
+      <created>1683662717445</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1683662717445</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
