@@ -8,8 +8,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.api.product.dto.ProductDto;
 
-import ru.jms.service.JmsSenderService;
+
 import ru.spring.shop.service.ProductService;
+import ru.spring.shop.service.jms.JmsSenderService;
 
 import java.net.URI;
 import java.util.List;
@@ -61,6 +62,7 @@ public class ProductRestController {
         ProductDto oldProductDto = productService.findById(id);
         ProductDto savedProductDto = productService.save(productDto);
         if (productDto.getCost() != oldProductDto.getCost()) {
+            savedProductDto.setOld_cost(oldProductDto.getCost());
             jmsSenderService.sendProductMessage(savedProductDto);
         }
         HttpHeaders httpHeaders = new HttpHeaders();
