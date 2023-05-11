@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Список продуктов</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<div th:replace="~{common/navbar :: navi(Cart)}"></div>
+
+<div class="container">
+    <span th:if="${cart.items.size() == 0}">Корзина пуста</span>
+    <div th:unless="${cart.items.size() == 0}">
+<!--        <span th:text="${cart.items.size()}"></span>-->
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Наименование</th>
+                <th scope="col">Цена за ед.</th>
+                <th scope="col">Кол-во</th>
+                <th scope="col">Сумма</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="cartItem, i : ${cart.items}">
+
+                <td th:text="${i.count}"></td>
+                <td th:text="${cartItem.product.title}"></td>
+                <td th:text="${cartItem.itemPrice}"></td>
+                <td th:text="${cartItem.quantity}"></td>
+                <td th:text="${cartItem.totalPrice}"></td>
+
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Итого заказ:</td>
+                <td th:text="${cart.totalPrice}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <a sec:authorize="isAuthenticated()" type="button" class="btn btn-primary" th:href="@{/order/fill}">Продолжить оформление заказа</a>
+        <a sec:authorize="isAnonymous()" data-toggle="modal" data-target="#authWarningModal" type="button" class="btn btn-primary" th:href="@{/order/fill}">Продолжить оформление заказа</a>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="authWarningModal" tabindex="-1" role="dialog" aria-labelledby="authWarningModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="authWarningModalLabel">Предупреждение</h5>
+<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <span aria-hidden="true">&times;</span>-->
+<!--                </button>-->
+            </div>
+            <div class="modal-body">
+                <span>Для формирования заказа вам необходимо зайти в свою учетную запись</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Хорошо</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="~{common/footer :: footerBlock}"/>
+
+
+</body>
+</html>

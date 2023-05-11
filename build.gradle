@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'org.example'
-version '1.0-SNAPSHOT'
+version '0.0.1'
 sourceCompatibility = '11'
 
 configurations {
@@ -39,14 +39,14 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-artemis'
-//    implementation 'org.springframework.boot:spring-boot-starter-security'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 
-//    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
@@ -62,7 +62,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'com.h2database:h2'
 
-    implementation files('lib/api-0.0.22-plain.jar')
+    implementation files('lib/api-0.0.23-plain.jar')
 }
 
 dependencyManagement {

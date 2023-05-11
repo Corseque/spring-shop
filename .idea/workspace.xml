@@ -5,8 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 8 jms">
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/validation/FieldMatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/validation/FieldMatchValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/CustomAuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/security/AccountRoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/security/AccountUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/security/AuthorityDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/AccountRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/AccountUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/Authority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/enums/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/exeption/InvalidUsernameOrPasswordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/exeption/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/exeption/UsernameAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/security/JpaUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/login-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cart/cart-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/access-denied.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/order-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/jms/JmsListenerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/jms/JmsListenerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api" beforeDir="false" afterPath="$PROJECT_DIR$/api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/ShopConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/ShopConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockMvcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockMvcTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/CategoryRestControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/CategoryRestControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ManufacturerRestControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ManufacturerRestControllerIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +132,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -130,7 +167,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/Corse/IdeaProjects/Spring2/spring-shop/src/main/java/ru/spring/shop/service/jms",
+    "last_opened_file_path": "C:/Users/Corse/IdeaProjects/Spring2/spring-shop/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -150,12 +187,15 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.api.security.validation" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java\ru\spring\shop\service\jms" />
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java\ru\spring\shop\config\jms" />
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java\ru\spring\shop\config" />
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api\src\main\java\ru\jms" />
-      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\api-external\src\main\java\ru\apiexternal\dao" />
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\resources" />
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java\ru\spring\shop" />
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java\ru\spring\shop\security" />
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java\ru\spring\shop\dao" />
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java\ru\spring\shop\entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java" />
@@ -173,38 +213,17 @@
       <recent name="ru.spring.shop.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.spring.shop.entity.common" />
+      <recent name="ru.spring.shop.web.mapper" />
+      <recent name="ru.spring.shop.service" />
+      <recent name="ru.spring.shop.config" />
       <recent name="ru.apiexternal.security.jwt" />
-      <recent name="ru.apiexternal.security" />
-      <recent name="ru.apiexternal.config" />
-      <recent name="main.java.ru.apiexternal.rest" />
-      <recent name="ru.apiexternal.rest" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Shop">
     <configuration name="test-data.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/api-external/src/main/resources/db/test-data.sql" />
       <script-mode>FILE</script-mode>
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in 'spring-shop.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="api [build] (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -232,6 +251,27 @@
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/../api" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-shop [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -283,8 +323,8 @@
     </configuration>
     <list>
       <item itemvalue="Database Script.test-data.sql" />
+      <item itemvalue="Gradle.spring-shop [build]" />
       <item itemvalue="Gradle.api [build] (1)" />
-      <item itemvalue="Gradle.Tests in 'spring-shop.test'" />
       <item itemvalue="Gradle.api [build]" />
       <item itemvalue="Spring Boot.ApiExternalApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -294,9 +334,9 @@
       <list>
         <item itemvalue="Spring Boot.Shop" />
         <item itemvalue="Gradle.api [build] (1)" />
+        <item itemvalue="Gradle.spring-shop [build]" />
         <item itemvalue="Database Script.test-data.sql" />
         <item itemvalue="Gradle.api [build]" />
-        <item itemvalue="Gradle.Tests in 'spring-shop.test'" />
       </list>
     </recent_temporary>
   </component>
@@ -314,7 +354,7 @@
       <workItem from="1680859425457" duration="21704000" />
       <workItem from="1681246868337" duration="22646000" />
       <workItem from="1681458343262" duration="57893000" />
-      <workItem from="1683327533620" duration="22058000" />
+      <workItem from="1683327533620" duration="31610000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -519,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683662717445</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="lesson 8 jms">
+      <created>1683665285932</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1683665285932</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
