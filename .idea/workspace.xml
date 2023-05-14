@@ -4,45 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 8 jms">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/validation/FieldMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/validation/FieldMatchValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/CustomAuthenticationSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/security/AccountRoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/security/AccountUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/security/AuthorityDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/AccountRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/AccountUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/enums/AccountStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/exeption/InvalidUsernameOrPasswordException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/exeption/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/exeption/UsernameAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/security/JpaUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/login-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-confirmation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cart/cart-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/access-denied.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/order-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-list.html" afterDir="false" />
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 9 shop modification">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/ConfirmationTokenDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/security/ConfirmationTokenDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/ConfirmationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ConfirmationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/confirmation-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-denied.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api" beforeDir="false" afterPath="$PROJECT_DIR$/api" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/validation/FieldMatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/validation/FieldMatchValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/ShopConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/ShopConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockMvcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/ManufacturerRestControllerMockMvcTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/CategoryRestControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/CategoryRestControllerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ManufacturerRestControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/spring/shop/web/rest/integration/ManufacturerRestControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/CustomAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/CustomAuthenticationSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/AccountUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/AccountUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/security/JpaUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/security/JpaUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/login-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/login-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-confirmation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +119,7 @@
         <option value="Enum" />
         <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -156,6 +142,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -198,6 +185,7 @@
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java\ru\spring\shop\entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\resources\templates\auth" />
       <recent name="C:\Users\Corse\IdeaProjects\Spring2\spring-shop\src\main\java" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -354,7 +342,7 @@
       <workItem from="1680859425457" duration="21704000" />
       <workItem from="1681246868337" duration="22646000" />
       <workItem from="1681458343262" duration="57893000" />
-      <workItem from="1683327533620" duration="31610000" />
+      <workItem from="1683327533620" duration="59576000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -566,7 +554,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683665285932</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="lesson 9 shop modification">
+      <created>1683834785521</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1683834785521</updated>
+    </task>
+    <task id="LOCAL-00032" summary="lesson 9 shop modification">
+      <created>1683834814117</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1683834814117</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +599,8 @@
     <MESSAGE value="lesson 7: token with sessions" />
     <MESSAGE value="lesson 8" />
     <MESSAGE value="lesson 8 jms" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 8 jms" />
+    <MESSAGE value="lesson 9 shop modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 9 shop modification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -625,6 +628,31 @@
           <url>file://$PROJECT_DIR$/api-external/src/main/java/ru/apiexternal/rest/ProductRestController.java</url>
           <line>25</line>
           <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/security/JpaUserDetailService.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,6 +5,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.validation.annotation.Validated;
 import ru.spring.shop.entity.common.SecurityEntity;
 import ru.spring.shop.entity.security.enums.AccountStatus;
 
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 @Getter
 @Setter
 @Entity
+@Validated
 @Table(name = "account_user")
 @EntityListeners(AuditingEntityListener.class)
 public class AccountUser extends SecurityEntity implements UserDetails {
@@ -43,6 +45,7 @@ public class AccountUser extends SecurityEntity implements UserDetails {
             joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
     private Set<AccountRole> roles;
+
     //todo менять при введении кода активации на true (при регитсрации false)
     private boolean accountNonExpired;
     private boolean accountNonLocked;

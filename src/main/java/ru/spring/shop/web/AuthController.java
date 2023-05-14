@@ -8,10 +8,14 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import ru.api.security.ConfirmationTokenDto;
 import ru.api.security.UserDto;
+import ru.spring.shop.service.ConfirmationService;
 import ru.spring.shop.service.UserService;
 
 import javax.validation.Valid;
+import java.util.NoSuchElementException;
 
 @Controller
 @RequiredArgsConstructor
@@ -19,13 +23,14 @@ import javax.validation.Valid;
 public class AuthController {
 
     private final UserService userService;
+    private final ConfirmationService confirmationService;
 
     @GetMapping("/login")
     public String loginPage() {
         return "auth/login-form";
     }
 
-    @GetMapping("/registration")
+    @GetMapping("/register")
     public String registrationForm(Model model) {
         model.addAttribute("userDto", new UserDto());
         return "auth/registration-form";
@@ -40,14 +45,48 @@ public class AuthController {
         try {
             userService.findByName(username);
             model.addAttribute("userDto", userDto);
-            model.addAttribute("registrationError", "Username already exists");
+            model.addAttribute("registrationError", "Username: " + username + " already exists");
             return "auth/registration-form";
-        } catch (UsernameNotFoundException ignored) {
-
+        } catch (NoSuchElementException ignored) {
+            userService.register(userDto);
+            confirmationService.createToken(username);
+            model.addAttribute("username", username);
+            return "auth/registration-confirmation";
         }
-        userService.register(userDto);
+    }
+
+    @GetMapping("/confirm_registration")
+    public String confirmationForm(@RequestParam(name = "username") String username, Model model) {
         model.addAttribute("username", username);
-        return "auth/registration-confirmation";
+        model.addAttribute("confirmationToken", new ConfirmationTokenDto());
+        return "auth/confirmation-form";
+    }
+
+    @PostMapping("/confirm_registration")
+    public String handleConfirmationForm(@Valid ConfirmationTokenDto tokenDto, @RequestParam(name = "username") String username, BindingResult bindingResult, Model model) {
+        model.addAttribute("username", username);
+        if (bindingResult.hasErrors()) {
+            return "auth/confirmation-form";
+        }
+        try {
+            UserDto userDto = userService.findByName(username);
+            try {
+                if (confirmationService.confirmRegistration(tokenDto.getToken(), userDto.getUsername())) {
+                    return "auth/registration-success";
+                } else {
+                    model.addAttribute("confirmationError", "Invalid confirmation code. Try to enter code again.");
+                    return "auth/registration-denied";
+                }
+            } catch (NoSuchElementException noSuchElementException) {
+                noSuchElementException.printStackTrace();
+                model.addAttribute("confirmationError", "Invalid confirmation code. Try to enter code again.");
+                return "auth/registration-denied";
+            }
+        } catch (UsernameNotFoundException usernameNotFoundException) {
+            usernameNotFoundException.printStackTrace();
+            model.addAttribute("confirmationError", usernameNotFoundException.getMessage() + " Try to register again.");
+            return "auth/registration-denied";
+        }
     }
 
     //todo добавить метод обработки кода подтверждения

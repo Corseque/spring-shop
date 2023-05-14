@@ -12,12 +12,15 @@ import ru.api.security.AuthenticationUserDto;
 import ru.api.security.UserDto;
 import ru.spring.shop.dao.security.AccountRoleDao;
 import ru.spring.shop.dao.security.AccountUserDao;
+import ru.spring.shop.dao.security.ConfirmationTokenDao;
 import ru.spring.shop.entity.security.AccountRole;
 import ru.spring.shop.entity.security.AccountUser;
+import ru.spring.shop.entity.security.ConfirmationToken;
 import ru.spring.shop.entity.security.enums.AccountStatus;
 import ru.spring.shop.exeption.InvalidUsernameOrPasswordException;
 import ru.spring.shop.exeption.UserNotFoundException;
 import ru.spring.shop.exeption.UsernameAlreadyExistsException;
+import ru.spring.shop.service.ConfirmationService;
 import ru.spring.shop.service.UserService;
 import ru.spring.shop.web.mapper.UserMapper;
 
@@ -29,10 +32,11 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Service
 @Slf4j
-public class JpaUserDetailService implements UserDetailsService, UserService {
+public class JpaUserDetailService implements UserDetailsService, UserService, ConfirmationService {
 
     private final AccountUserDao accountUserDao;
     private final AccountRoleDao accountRoleDao;
+    private final ConfirmationTokenDao confirmationTokenDao;
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
 
@@ -136,6 +140,26 @@ public class JpaUserDetailService implements UserDetailsService, UserService {
         );
         disable(accountUser);
         update(accountUser);
+    }
+
+    //todo
+    @Override
+    public boolean confirmRegistration(String token, String username) {
+        ConfirmationToken confirmationToken = confirmationTokenDao.findByToken(token)
+                .orElseThrow(() -> new NoSuchElementException("Invalid confirmation code " + token));
+        AccountUser accountUser = confirmationToken.getAccountUser();
+        boolean resultConfirmation = accountUser.getUsername().equals(username);
+        if (resultConfirmation) {
+            enable(accountUser);
+        }
+        update(accountUser);
+        return resultConfirmation;
+    }
+
+    @Override
+    public void createToken(String username) {
+        ConfirmationToken confirmationToken = new ConfirmationToken(findByUsername(username));
+        confirmationTokenDao.save(confirmationToken);
     }
 
     private void enable(final AccountUser accountUser) {

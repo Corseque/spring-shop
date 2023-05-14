@@ -16,6 +16,7 @@ public interface UserService {
     UserDto update(UserDto userDto);
     void deleteById(Long id);
 
+
     //todo добавить метод обработки кода подтверждения(вопрос где хранить код в виду многопоточности)
 
     AccountUser findByUsernameAndPassword(AuthenticationUserDto authenticationUserDto);

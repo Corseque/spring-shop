@@ -2,6 +2,7 @@ package ru.spring.shop.entity;
 
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.validation.annotation.Validated;
 import ru.spring.shop.entity.common.InfoEntity;
 import ru.spring.shop.entity.enums.Status;
 
@@ -14,6 +15,7 @@ import java.util.Set;
 @Getter
 @NoArgsConstructor
 @Entity
+@Validated
 @Table(name = "manufacturer")
 @EntityListeners(AuditingEntityListener.class)
 public class Manufacturer extends InfoEntity {
