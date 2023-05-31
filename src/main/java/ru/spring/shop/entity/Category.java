@@ -24,6 +24,11 @@ public class Category extends InfoEntity {
     @Column(name = "title")
     private String title;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private Status status;
+
+
     @ManyToMany
     @JoinTable(name = "product_category",
             joinColumns = @JoinColumn(name = "category_id"),
@@ -45,8 +50,9 @@ public class Category extends InfoEntity {
     @Builder
     public Category(Long id, int version, String created_by, LocalDateTime created_date, String last_modified_by,
                     LocalDateTime last_modified_date, Status status, String title, Set<Product> products) {
-        super(id, version, created_by, created_date, last_modified_by, last_modified_date, status);
+        super(id, version, created_by, created_date, last_modified_by, last_modified_date);
         this.title = title;
         this.products = products;
+        this.status = status;
     }
 }

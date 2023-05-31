@@ -1,7 +1,7 @@
 package ru.spring.shop.web.mapper;
 
 import org.mapstruct.Mapper;
-import ru.api.security.UserDto;
+import ru.api.security.dto.UserDto;
 import ru.spring.shop.entity.security.AccountUser;
 
 @Mapper

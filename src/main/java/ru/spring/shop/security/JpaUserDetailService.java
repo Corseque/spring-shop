@@ -8,20 +8,23 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.api.security.AuthenticationUserDto;
-import ru.api.security.UserDto;
+import ru.api.security.dto.AuthenticationUserDto;
+//import ru.api.security.dto.CustomerDto;
+import ru.api.security.dto.UserDto;
+import ru.spring.shop.dao.OrderDao;
 import ru.spring.shop.dao.security.AccountRoleDao;
 import ru.spring.shop.dao.security.AccountUserDao;
 import ru.spring.shop.dao.security.ConfirmationTokenDao;
 import ru.spring.shop.entity.security.AccountRole;
 import ru.spring.shop.entity.security.AccountUser;
 import ru.spring.shop.entity.security.ConfirmationToken;
-import ru.spring.shop.entity.security.enums.AccountStatus;
+import ru.spring.shop.entity.enums.AccountStatus;
 import ru.spring.shop.exeption.InvalidUsernameOrPasswordException;
 import ru.spring.shop.exeption.UserNotFoundException;
 import ru.spring.shop.exeption.UsernameAlreadyExistsException;
 import ru.spring.shop.service.ConfirmationService;
 import ru.spring.shop.service.UserService;
+//import ru.spring.shop.web.mapper.CustomerMapper;
 import ru.spring.shop.web.mapper.UserMapper;
 
 import java.util.List;
@@ -97,13 +100,13 @@ public class JpaUserDetailService implements UserDetailsService, UserService, Co
 
     @Override
     @Transactional(readOnly = true)
-    public UserDto findByName(String name) {
+    public UserDto findUserDtoByName(String name) {
         return userMapper.toUserDto(accountUserDao.findByUsername(name)
                 .orElseThrow(() -> new NoSuchElementException("There is no user with name " + name)));
     }
 
     @Override
-    public AccountUser findByUsername(String username) {
+    public AccountUser findAccountUserByUsername(String username) {
         return accountUserDao.findByUsername(username).orElseThrow(
                 () -> new UsernameNotFoundException("Username: " + username + " not found.")
         );
@@ -142,7 +145,6 @@ public class JpaUserDetailService implements UserDetailsService, UserService, Co
         update(accountUser);
     }
 
-    //todo
     @Override
     public boolean confirmRegistration(String token, String username) {
         ConfirmationToken confirmationToken = confirmationTokenDao.findByToken(token)
@@ -158,7 +160,7 @@ public class JpaUserDetailService implements UserDetailsService, UserService, Co
 
     @Override
     public void createToken(String username) {
-        ConfirmationToken confirmationToken = new ConfirmationToken(findByUsername(username));
+        ConfirmationToken confirmationToken = new ConfirmationToken(findAccountUserByUsername(username));
         confirmationTokenDao.save(confirmationToken);
     }
 

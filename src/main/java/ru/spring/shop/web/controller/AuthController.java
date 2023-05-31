@@ -1,4 +1,4 @@
-package ru.spring.shop.web;
+package ru.spring.shop.web.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.api.security.ConfirmationTokenDto;
-import ru.api.security.UserDto;
+import ru.api.security.dto.ConfirmationTokenDto;
+import ru.api.security.dto.UserDto;
 import ru.spring.shop.service.ConfirmationService;
 import ru.spring.shop.service.UserService;
 
@@ -43,7 +43,7 @@ public class AuthController {
         }
         final String username = userDto.getUsername();
         try {
-            userService.findByName(username);
+            userService.findUserDtoByName(username);
             model.addAttribute("userDto", userDto);
             model.addAttribute("registrationError", "Username: " + username + " already exists");
             return "auth/registration-form";
@@ -69,7 +69,7 @@ public class AuthController {
             return "auth/confirmation-form";
         }
         try {
-            UserDto userDto = userService.findByName(username);
+            UserDto userDto = userService.findUserDtoByName(username);
             try {
                 if (confirmationService.confirmRegistration(tokenDto.getToken(), userDto.getUsername())) {
                     return "auth/registration-success";

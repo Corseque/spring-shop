@@ -6,15 +6,13 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
-import ru.spring.shop.entity.common.SecurityEntity;
-import ru.spring.shop.entity.security.enums.AccountStatus;
+import ru.spring.shop.entity.common.InfoEntity;
+import ru.spring.shop.entity.enums.AccountStatus;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-
 
 @Getter
 @Setter
@@ -22,19 +20,20 @@ import java.util.stream.Collectors;
 @Validated
 @Table(name = "account_user")
 @EntityListeners(AuditingEntityListener.class)
-public class AccountUser extends SecurityEntity implements UserDetails {
+public class AccountUser extends InfoEntity implements UserDetails {
 
+    @Column(name = "username")
     private String username;
+    @Column(name = "password")
     private String password;
+    @Column(name = "firstname")
     private String firstname;
+    @Column(name = "lastname")
     private String lastname;
-
     @Column(name = "email")
     private String email;
-
     @Column(name = "phone")
     private String phone;
-
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private AccountStatus status;

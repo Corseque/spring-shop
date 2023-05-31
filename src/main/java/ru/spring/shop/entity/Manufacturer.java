@@ -23,12 +23,12 @@ public class Manufacturer extends InfoEntity {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "manufacturer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "manufacturer", cascade = CascadeType.MERGE) //, fetch = FetchType.EAGER
     private Set<Product> products;
 
-
-
-
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private Status status;
 
 
     @Override
@@ -43,11 +43,11 @@ public class Manufacturer extends InfoEntity {
     }
 
     @Builder
-
     public Manufacturer(Long id, int version, String created_by, LocalDateTime created_date, String last_modified_by,
                         LocalDateTime last_modified_date, Status status, String name, Set<Product> products) {
-        super(id, version, created_by, created_date, last_modified_by, last_modified_date, status);
+        super(id, version, created_by, created_date, last_modified_by, last_modified_date);
         this.name = name;
         this.products = products;
+        this.status = status;
     }
 }

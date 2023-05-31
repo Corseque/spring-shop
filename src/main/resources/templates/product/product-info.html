@@ -16,9 +16,12 @@
 <div class="container">
     <h2 th:text="${'Название: ' + product.title}"></h2>
     <h2 th:text="${'Цена: ' + product.cost}"></h2>
+    <h2 th:text="${'Производитель: ' + product.manufacturer.getName()}"></h2>
+    <h2>Категории:</h2>
+    <h3 th:each="category : ${product.categories}" th:text="${category.getTitle()}"></h3>
 
 </div>
-<div th:replace="~{common/footer :: footerBlock}"/>
+<div th:replace="~{common/footer :: footerBlock}"></div>
 
 
 </body>

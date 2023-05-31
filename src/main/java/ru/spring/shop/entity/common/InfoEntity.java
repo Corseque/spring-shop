@@ -5,7 +5,6 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
-import ru.spring.shop.entity.enums.Status;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -15,7 +14,7 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @MappedSuperclass
-public class InfoEntity extends BaseEntity{
+public class InfoEntity extends BaseEntity {
 
     @Version
     @Column(name = "version")
@@ -37,18 +36,20 @@ public class InfoEntity extends BaseEntity{
     @Column(name = "last_modified_date")
     private LocalDateTime last_modified_date;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "status")
-    private Status status;
+//    @Enumerated(EnumType.STRING)
+//    @Column(name = "status")
+//    private Status status;
 
     public InfoEntity(Long id, int version, String created_by, LocalDateTime created_date, String last_modified_by,
-                      LocalDateTime last_modified_date, Status status) {
+                      LocalDateTime last_modified_date
+//            , Status status
+    ) {
         super(id);
         this.version = version;
         this.created_by = created_by;
         this.created_date = created_date;
         this.last_modified_by = last_modified_by;
         this.last_modified_date = last_modified_date;
-        this.status = status;
+//        this.status = status;
     }
 }

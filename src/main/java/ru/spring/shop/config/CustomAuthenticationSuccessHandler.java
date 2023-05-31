@@ -22,7 +22,7 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, 
                                         Authentication authentication) throws IOException {
         String username = authentication.getName();
-        AccountUser accountUser = userService.findByUsername(username);
+        AccountUser accountUser = userService.findAccountUserByUsername(username);
         HttpSession session = request.getSession();
         session.setAttribute("user", accountUser);
         if (!request.getHeader("referer").contains("login")) {
