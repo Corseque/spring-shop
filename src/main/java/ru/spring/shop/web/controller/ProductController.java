@@ -8,11 +8,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ru.api.product.dto.ProductDto;
+import ru.spring.shop.entity.ProductImage;
 import ru.spring.shop.service.*;
 
 import javax.imageio.ImageIO;
 import java.io.ByteArrayOutputStream;
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -59,16 +61,27 @@ public class ProductController {
             return "redirect:/product/all";
         }
         model.addAttribute("product", productDto);
+        model.addAttribute("images", productService.getImagesByProductId(productDto.getId()));
         return "product/product-info";
-//        return "product/product-form";
     }
+
+//    @PostMapping
+//    @PreAuthorize("hasAnyAuthority('product.create', 'product.update')")
+//    public String saveProduct(ProductDto product, @RequestParam("file") MultipartFile file) {
+//        product.setDate(LocalDate.now()); // todo
+//        productService.save(product, file);
+//        return "redirect:/product/all";
+//    }
 
     @PostMapping
     @PreAuthorize("hasAnyAuthority('product.create', 'product.update')")
-    public String saveProduct(ProductDto product, @RequestParam("file") MultipartFile file) {
+    public String saveProduct(Model model, ProductDto product, @RequestParam("files") MultipartFile[] files) {
         product.setDate(LocalDate.now()); // todo
-        productService.save(product, file);
-        return "redirect:/product/all";
+        ProductDto savedProduct = productService.save(product, files);
+        List<ProductImage> imagesByProduct = productService.getImagesByProductId(savedProduct.getId());
+        model.addAttribute("product", savedProduct);
+        model.addAttribute("images", imagesByProduct);
+        return "product/product-info";
     }
 
     @GetMapping("/delete/{id}")
@@ -78,11 +91,23 @@ public class ProductController {
         return "redirect:/product/all";
     }
 
-    @GetMapping(value = "/images/{id}", produces = MediaType.IMAGE_PNG_VALUE)
+    @GetMapping(value = "/image/{id}", produces = MediaType.IMAGE_PNG_VALUE)
     @ResponseBody
     public byte[] getImage(@PathVariable Long id) {
         try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()) {
             ImageIO.write(productImageService.loadFileAsImage(id), "png", byteArrayOutputStream);
+            return byteArrayOutputStream.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new byte[]{};
+    }
+
+    @GetMapping(value = "/images/{imageId}", produces = MediaType.IMAGE_PNG_VALUE)
+    @ResponseBody
+    public byte[] getImages(@PathVariable Long imageId) {
+        try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()) {
+            ImageIO.write(productImageService.loadFileAsImageByImageId(imageId), "png", byteArrayOutputStream);
             return byteArrayOutputStream.toByteArray();
         } catch (Exception e) {
             e.printStackTrace();

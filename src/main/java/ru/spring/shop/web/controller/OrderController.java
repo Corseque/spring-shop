@@ -30,7 +30,6 @@ public class OrderController {
     private final JpaUserDetailService jpaUserDetailService;
     private final OrderService orderService;
 
-
     @GetMapping("/fill")
     public String fillOrder(Model model, HttpSession httpSession) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

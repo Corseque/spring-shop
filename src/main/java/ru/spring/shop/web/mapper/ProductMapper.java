@@ -15,14 +15,13 @@ import java.util.stream.Collectors;
 
 @Mapper(uses = ManufacturerMapper.class)
 public interface ProductMapper {
-    Product toProduct (ProductDto productDto,
-//                       @Context ManufacturerDao manufacturerDao,
-                       @Context CategoryDao categoryDao);
+    Product toProduct (ProductDto productDto, @Context CategoryDao categoryDao);
 
     ProductDto toProductDto (Product product);
 
     default Set<Category> getCategories(Set<CategoryDto> categoriesDto, @Context CategoryDao categoryDao) {
-        return categoriesDto.stream().map(categoryDto -> categoryDao.findById(categoryDto.getId())
+        return categoriesDto.stream()
+                .map(categoryDto -> categoryDao.findById(categoryDto.getId())
                         .orElseThrow(() -> new NoSuchElementException("There is no category with id " + categoryDto.getId())))
                 .collect(Collectors.toSet());
     }

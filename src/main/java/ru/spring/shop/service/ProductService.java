@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import ru.api.product.dto.ProductDto;
 import ru.spring.shop.dao.CategoryDao;
-import ru.spring.shop.dao.ManufacturerDao;
 import ru.spring.shop.dao.ProductDao;
 import ru.spring.shop.entity.Product;
 
@@ -53,26 +52,26 @@ public class ProductService {
         return productMapper.toProductDto(productDao.findByTitle(title)
                 .orElseThrow(() -> new NoSuchElementException("There is no product with title " + title)));
     }
+//
+//    public ProductDto save(ProductDto productDto, MultipartFile multipartFile) {
+//        Product product = productMapper.toProduct(productDto, categoryDao);
+//        if (product.getId() != null) {
+//            productDao.findById(product.getId()).ifPresent((p) ->
+//                    product.setVersion(p.getVersion())
+//            );
+//        }
+//        if (multipartFile != null && !multipartFile.isEmpty()) {
+//            String pathToSavedFile = productImageService.save(multipartFile);
+//            ProductImage productImage = ProductImage.builder()
+//                    .path(pathToSavedFile)
+//                    .product(product)
+//                    .build();
+//            product.addImage(productImage);
+//        }
+//        return productMapper.toProductDto(productDao.save(product));
+//    }
 
-    public ProductDto save(ProductDto productDto, MultipartFile multipartFile) {
-        Product product = productMapper.toProduct(productDto, categoryDao);
-        if (product.getId() != null) {
-            productDao.findById(product.getId()).ifPresent((p) ->
-                    product.setVersion(p.getVersion())
-            );
-        }
-        if (multipartFile != null && !multipartFile.isEmpty()) {
-            String pathToSavedFile = productImageService.save(multipartFile);
-            ProductImage productImage = ProductImage.builder()
-                    .path(pathToSavedFile)
-                    .product(product)
-                    .build();
-            product.addImage(productImage);
-        }
-        return productMapper.toProductDto(productDao.save(product));
-    }
-
-    public ProductDto saveFiles(ProductDto productDto, MultipartFile[] multipartFiles) {
+    public ProductDto save(ProductDto productDto, MultipartFile[] multipartFiles) {
         Product product = productMapper.toProduct(productDto, categoryDao);
         if (product.getId() != null) {
             productDao.findById(product.getId()).ifPresent((p) ->
@@ -106,12 +105,15 @@ public class ProductService {
     }
 
     public void delete(ProductDto productDto) {
-        Product product = productMapper.toProduct(productDto,
-//                manufacturerDao,
-                categoryDao);
+        Product product = productMapper.toProduct(productDto, categoryDao);
         if (product.getId() != null) {
             product.setStatus(Status.DISABLE);
             productDao.save(product);
         }
+    }
+
+    public List<ProductImage> getImagesByProductId(Long id) {
+        return productDao.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("There is no product with id " + id)).getImages();
     }
 }

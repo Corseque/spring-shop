@@ -20,6 +20,21 @@
     <h2>Категории:</h2>
     <h3 th:each="category : ${product.categories}" th:text="${category.getTitle()}"></h3>
 
+<!--<div>  &lt;!&ndash;    th:unless="${images == null}"&ndash;&gt;-->
+    <span th:if="${images.size() == 0}">Изображений нет</span>
+
+    <div class="row text-center text-lg-start" th:unless="${images.size() == 0}">
+
+        <div class="col-lg-3 col-md-4 col-6" th:each="image, i : ${images}">
+            <a th:href="@{'/product/images/' + ${image.id}}" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" th:src="@{'/product/images/' + ${image.id}}" alt="">
+            </a>
+        </div>
+    </div>
+
+<!--</div>-->
+
+
 </div>
 <div th:replace="~{common/footer :: footerBlock}"></div>
 

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.spring.shop.entity.common.BaseEntity;
+import ru.spring.shop.entity.enums.ImageStatus;
 
 import javax.persistence.*;
 
@@ -17,6 +18,10 @@ public class ProductImage extends BaseEntity {
 
     @Column(name = "path")
     private String path;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "image_type")
+    private ImageStatus status;
 
     @ManyToOne
     @JoinColumn(name = "product_id")

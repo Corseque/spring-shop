@@ -6,7 +6,7 @@ import ru.api.order_item.dto.OrderItemDto;
 import ru.spring.shop.dao.OrderDao;
 import ru.spring.shop.entity.OrderItem;
 
-@Mapper
+@Mapper(uses = ProductMapper.class)
 public interface OrderItemMapper {
 
     OrderItem toOrderItem(OrderItemDto orderItemDto, @Context OrderDao orderDao);

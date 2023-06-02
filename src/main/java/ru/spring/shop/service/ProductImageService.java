@@ -20,8 +20,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.nio.file.*;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.UUID;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -29,14 +31,10 @@ import java.util.UUID;
 public class ProductImageService {
 
 //    private List<String> paths; //пути внутри storageLocation
-
     private static final String path = "products";
-
     @Value("${storage.location}")
     private String storagePath;
-
     private final ProductImageDao productImageDao;
-
     private Path rootLocation;
 
     @PostConstruct
@@ -48,6 +46,15 @@ public class ProductImageService {
             log.error("Error while creating storage {}", rootLocation.toAbsolutePath());
             throw new StorageException(String.format("Error while creating storage %s", rootLocation.toAbsolutePath()));
         }
+    }
+
+    public List<String> save(MultipartFile[] files) {
+        List<String> filenames = new ArrayList<>();
+        for (MultipartFile file : files) {
+            String filename = UUID.randomUUID() + "_" + StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
+            filenames.add(this.save(file, filename));
+        }
+        return filenames;
     }
 
     public String save(MultipartFile file) {
@@ -73,7 +80,6 @@ public class ProductImageService {
             } catch (IOException e) {
                 throw new StorageException(String.format("Error while creating file %s", filename));
             }
-
         } catch (IOException e) {
             throw new StorageException("Error while creating storage");
         }
@@ -82,12 +88,19 @@ public class ProductImageService {
         } catch (IOException e) {
             throw new StorageException(String.format("Error while saving file %s", filename));
         }
-
         return filename;
     }
 
+    public BufferedImage loadFileAsImageByImageId(Long id) throws IOException {
+        String imageName = productImageDao.findById(id)
+                .orElseThrow(() -> new StorageFileNotFoundException(String.format("File with id %s not found in directory %s", id, path)))
+                        .getPath();
+        Resource resource = loadAsResource(imageName);
+        return ImageIO.read(resource.getFile());
+    }
+
     public BufferedImage loadFileAsImage(Long id) throws IOException {
-        String imageName = productImageDao.findImageNameByProductId(id);
+        String imageName = productImageDao.findIconImageNameByProductId(id);
         Resource resource = loadAsResource(imageName);
         return ImageIO.read(resource.getFile());
     }

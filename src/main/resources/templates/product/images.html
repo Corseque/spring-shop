@@ -15,65 +15,102 @@
 
 <div class="container">
 
-    <form method="POST" enctype="multipart/form-data" th:action="@{/upload-multiple-files}">
-        <input type="file" name="files" multiple> <br/><br/>
-        <button type="submit">Сохранить</button>
-    </form>
 
-    <div class="lightbox">
-        <div class="multi-carousel">
-            <div class="multi-carousel-inner">
-                <div class="multi-carousel-item">
-                    <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
-                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
-                            alt="Table Full of Spices"
-                            class="w-100"
-                    />
-                </div>
-                <div class="multi-carousel-item">
-                    <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/2.webp"
-                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/2.webp"
-                            alt="Winter Landscape"
-                            class="w-100"
-                    />
-                </div>
-                <div class="multi-carousel-item">
-                    <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/3.webp"
-                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/3.webp"
-                            alt="View of the City in the Mountains"
-                            class="w-100"
-                    />
-                </div>
-                <div class="multi-carousel-item">
-                    <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/4.webp"
-                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/4.webp"
-                            alt="Place Royale Bruxelles"
-                            class="w-100"
-                    />
-                </div>
+        <h1 class="h2 text-center">Bootstrap 3 - Создание адаптивной галереи изображений с помощью сетки</h1>
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_01.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_01.jpg" alt="">
+                </a>
             </div>
-            <button
-                    class="carousel-control-prev"
-                    type="button"
-                    tabindex="0"
-                    data-mdb-slide="prev"
-            >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button
-                    class="carousel-control-next"
-                    type="button"
-                    tabindex="0"
-                    data-mdb-slide="next"
-            >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_02.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_02.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_03.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_03.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_04.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_04.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_05.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_05.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_06.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_06.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_07.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_07.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_08.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_08.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_09.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_09.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_10.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_10.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_11.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_11.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_12.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_12.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_13.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_13.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_14.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_14.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_15.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_15.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_16.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_16.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_17.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_17.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="/examples/images/for-image-gallery/img_18.jpg">
+                    <img class="img-responsive" src="/examples/images/for-image-gallery/img_18.jpg" alt="">
+                </a>
+            </div>
         </div>
-    </div>
+
+
 
 </div>
 <div th:replace="~{common/footer :: footerBlock}"></div>

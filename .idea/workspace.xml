@@ -4,69 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 9 shop modification">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/address/dto/AddressDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/order/api/OrderGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/order/dto/OrderDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/order_item/dto/OrderItemDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/dto/CustomerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/convecters/CategoryConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/convecters/ManufacturerConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/AddressDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/OrderItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/ProductImageDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/ProductImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/enums/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/exeption/StorageException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/exeption/StorageFileNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/AddressService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/OrderItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductImageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/AddressMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/CustomerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/OrderItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/model/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/order-success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/images.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="b439ee63-d8e5-4206-8190-f9d7ed4abba3" name="Changes" comment="lesson 11 product images">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/enums/ImageStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api" beforeDir="false" afterPath="$PROJECT_DIR$/api" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/category/dto/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/category/dto/CategoryDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/product/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/product/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/AuthenticationUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/dto/AuthenticationUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/ConfirmationTokenDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/dto/ConfirmationTokenDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/AuthenticationGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/AuthenticationGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/UserGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/ru/api/security/api/UserGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/CustomAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/config/CustomAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Manufacturer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/common/InfoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/common/InfoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/AccountUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/AccountUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/security/enums/AccountStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/enums/AccountStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/security/JpaUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/security/JpaUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/ProductImageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/dao/ProductImageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/ProductImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/entity/ProductImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductImageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart/cart-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cart/cart-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/order-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/order-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/OrderItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/OrderItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/spring/shop/web/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/images.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/product-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/product-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/product-list.html" afterDir="false" />
@@ -158,16 +110,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Enum" />
         <option value="AnnotationType" />
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="JpbToolWindowState">
@@ -277,10 +229,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="spring-shop [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../api" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -298,7 +250,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="spring-shop [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="spring-shop [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -309,7 +261,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -353,9 +305,9 @@
     </configuration>
     <list>
       <item itemvalue="Database Script.test-data.sql" />
+      <item itemvalue="Gradle.spring-shop [clean]" />
       <item itemvalue="Gradle.spring-shop [build]" />
       <item itemvalue="Gradle.api [build] (1)" />
-      <item itemvalue="Gradle.api [build]" />
       <item itemvalue="Spring Boot.ApiExternalApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.Shop" />
@@ -364,9 +316,9 @@
       <list>
         <item itemvalue="Spring Boot.Shop" />
         <item itemvalue="Gradle.spring-shop [build]" />
+        <item itemvalue="Gradle.spring-shop [clean]" />
         <item itemvalue="Gradle.api [build] (1)" />
         <item itemvalue="Database Script.test-data.sql" />
-        <item itemvalue="Gradle.api [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -385,7 +337,7 @@
       <workItem from="1681246868337" duration="22646000" />
       <workItem from="1681458343262" duration="57893000" />
       <workItem from="1683327533620" duration="59878000" />
-      <workItem from="1684223119580" duration="89239000" />
+      <workItem from="1684223119580" duration="101247000" />
     </task>
     <task id="LOCAL-00001" summary="Config-server-and-encryption">
       <created>1680376600536</created>
@@ -618,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684098619998</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="lesson 11 order">
+      <created>1685565860390</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1685565860390</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +609,9 @@
     <MESSAGE value="lesson 8" />
     <MESSAGE value="lesson 8 jms" />
     <MESSAGE value="lesson 9 shop modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 9 shop modification" />
+    <MESSAGE value="lesson 11 order" />
+    <MESSAGE value="lesson 11 product images" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 11 product images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -681,7 +642,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/security/JpaUserDetailService.java</url>
-          <line>158</line>
+          <line>151</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -706,18 +667,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/ProductController.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/ProductController.java</url>
-          <line>39</line>
+          <line>38</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/service/OrderService.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="118" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/web/controller/ProductController.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductService.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/shop/service/ProductService.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="122" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
